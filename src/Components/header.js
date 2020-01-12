@@ -35,7 +35,6 @@ const Header = () => {
                     <Nav.Link href="/Blog">Blog</Nav.Link>
                     <Nav.Link href="/Books">Books</Nav.Link>
                     <Nav.Link href="/About">About</Nav.Link>
-                    <Nav.Link href="/MailChimpSub">Subscribe</Nav.Link>
                     </Nav>
                     <Nav>
                     <Nav.Link href="#github">
