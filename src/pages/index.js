@@ -21,8 +21,8 @@ const  IndexPage = () => {
 
     return (
         <Layout>
-           <div style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[1].node.frontmatter.title}</div>
-            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[1].node.html}}></div>
+           <div style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</div>
+            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div>
         </Layout>
     )
 }
