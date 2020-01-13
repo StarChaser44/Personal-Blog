@@ -7,6 +7,6 @@ date: 12-19-19
 
 I started this site to talk about my experiences as a computer science student and give new students a bit of insight into what life is like as a computer science student.
 
-I will also post explanations about topics that new computer science students seem to struggle with at a fundamental level inorder to assist students and not discourage them with unnecesarry jargon
+I will also post explanations about topics that new computer science students seem to struggle with at a fundamental level inorder to assist students and not discourage them by being super technical.
 
 There's a bit of something for everyone here so I hope you find something you enjoy!
