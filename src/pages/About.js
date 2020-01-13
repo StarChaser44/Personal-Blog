@@ -22,9 +22,9 @@ const AboutPage = () => {
     `)
     return (
         <Layout>
-            <h1 style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</h1>
-            <p>{data.allMarkdownRemark.edges[0].node.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div>
+            <h1 style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[2].node.frontmatter.title}</h1>
+            <p>{data.allMarkdownRemark.edges[2].node.frontmatter.date}</p>
+            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[2].node.html}}></div>
            
         </Layout>
     )
