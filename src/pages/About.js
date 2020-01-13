@@ -4,28 +4,28 @@ import Layout from '../Components/Layout'
 import '../Styles/txtFmt.scss'
 const AboutPage = () => {
     const data = useStaticQuery(graphql`
-        query {
-            allMarkdownRemark{
-                edges {
-                    node {
-                    frontmatter{
-                        title
-                    }
-                    fields {
-                        slug
-                    }
-                    html
-                    }
-                }
+    query{
+        allMarkdownRemark (
+        sort: { fields: frontmatter___date, order: ASC}
+      ){ 
+        edges {
+          node {
+            id
+            frontmatter{
+              title,
+              date
             }
+            html
+          }
         }
-    `)
+        }
+    }
+    `);
+
     return (
         <Layout>
-            <h1 style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[1].node.frontmatter.title}</h1>
-            <p>{data.allMarkdownRemark.edges[1].node.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[1].node.html}}></div>
-           
+           <div style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</div>
+            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div>
         </Layout>
     )
 }

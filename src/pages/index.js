@@ -6,14 +6,18 @@ import { graphql, useStaticQuery } from 'gatsby'
 const  IndexPage = () => {
     const data = useStaticQuery(graphql`
     query{
-        allMarkdownRemark {
+        allMarkdownRemark (
+        sort: { fields: frontmatter___date, order: ASC}
+      ){ 
         edges {
-        node {
+          node {
+            id
             frontmatter{
-            title
+              title,
+              date
             }
             html
-        }
+          }
         }
         }
     }
@@ -21,8 +25,8 @@ const  IndexPage = () => {
 
     return (
         <Layout>
-           <div style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</div>
-            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div>
+           <div style={{textAlign: 'center'}}>{data.allMarkdownRemark.edges[1].node.frontmatter.title}</div>
+            <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[1].node.html}}></div>
         </Layout>
     )
 }
