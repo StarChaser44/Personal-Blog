@@ -17,7 +17,7 @@ const BlogPage = () => {
             node {
               title
               slug
-              publishedDate(fromNow: true)
+              publishedDate(formatString: "MMMM DD, YYYY")
               description
             }
           }
@@ -41,7 +41,7 @@ const BlogPage = () => {
                               {edge.node.description}
                             </Card.Text>
                           </Card.Body>
-                          <p className={blogstyles.pText}> posted {edge.node.publishedDate}</p>
+                          <p className={blogstyles.pText}> {edge.node.publishedDate}</p>
                         </Card>
                         </Link>
                     </li>

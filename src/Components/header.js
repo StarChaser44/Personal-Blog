@@ -39,7 +39,7 @@ const Header = () => {
                     <Nav>
                     <Nav.Link href="#github">
                         <IconButton target="_blank" href="https://github.com/starchaser44">
-                            <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
+                            <FontAwesomeIcon style={{marginTop: "7px"}}icon={faGithubAlt}></FontAwesomeIcon>
                         </IconButton>
                     </Nav.Link>
                     <Nav.Link href="#instagram">
