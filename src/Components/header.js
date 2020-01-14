@@ -48,7 +48,7 @@ const Header = () => {
                         </IconButton>
                     </Nav.Link>
                     <Nav.Link href="#twitter">
-                        <IconButton target="_blank" href="https://twitter.com">
+                        <IconButton target="_blank" href="https://twitter.com/blizik22">
                             <FontAwesomeIcon style={{marginTop:"1px"}} icon={faTwitter}></FontAwesomeIcon>
                         </IconButton>
                     </Nav.Link>
