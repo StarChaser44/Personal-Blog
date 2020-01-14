@@ -39,17 +39,17 @@ const Header = () => {
                     <Nav>
                     <Nav.Link href="#github">
                         <IconButton target="_blank" href="https://github.com/starchaser44">
-                            <FontAwesomeIcon style={{marginTop: "7px"}}icon={faGithubAlt}></FontAwesomeIcon>
+                            <FontAwesomeIcon style={{marginTop: "2px"}}icon={faGithubAlt}></FontAwesomeIcon>
                         </IconButton>
                     </Nav.Link>
                     <Nav.Link href="#instagram">
                         <IconButton target="_blank" href="https://instagram.com/blizik22">
-                            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                            <FontAwesomeIcon style={{marginBottom: "3px"}}icon={faInstagram}></FontAwesomeIcon>
                         </IconButton>
                     </Nav.Link>
                     <Nav.Link href="#twitter">
                         <IconButton target="_blank" href="https://twitter.com">
-                            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                            <FontAwesomeIcon style={{marginTop:"1px"}} icon={faTwitter}></FontAwesomeIcon>
                         </IconButton>
                     </Nav.Link>
                     </Nav>

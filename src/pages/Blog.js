@@ -31,7 +31,6 @@ const BlogPage = () => {
             <ol className={blogstyles.posts}>
             {data.allContentfulBlogPost.edges.map((edge) => {
                 return (
-                  
                     <li>
                         <Link id={blogstyles.fmt} to={`/blog/${edge.node.slug}`}>
                         <Card className={blogstyles.card}bg="dark" text="white">
