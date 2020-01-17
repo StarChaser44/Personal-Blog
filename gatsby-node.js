@@ -3,7 +3,8 @@ const path = require('path');
 module.exports.onCreateNode = ({node, actions}) => {
     const { createNodeField } = actions;
     if(node.internal.type === 'MarkdownRemark'){
-        const slug = path.basename(node.fileAbsolutePath, ".md");
+        const file = String(node.fileAbsolutePath);
+        const slug = path.basename(file, ".md");
         createNodeField({
             node,
             name: 'slug',

@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../Components/Layout'
 import {graphql} from 'gatsby'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import '../Styles/txtFmt.scss'
 
 export const query = graphql`
