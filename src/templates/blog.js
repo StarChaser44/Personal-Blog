@@ -5,15 +5,16 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import '../Styles/txtFmt.scss'
 
 export const query = graphql`
-query($slug: String!) {
-    contentfulBlogPost(slug:{eq: $slug}){
-        title
-        publishedDate(fromNow: true)
-        body {
-            json
+query ($slug: String!){
+    contentfulBlogPost(slug: {eq: $slug}){
+      title
+      blogPostsMarkdown{
+        childMarkdownRemark{
+          html
         }
+      }
     }
-}
+  }
 ` 
 
 
@@ -22,9 +23,7 @@ const Blog = (props) => {
         <Layout>
             <h2 style={{marginTop: '2rem', paddingTop: '10px', textAlign: 'center'}}>{props.data.contentfulBlogPost.title}</h2>
             {/* <p>{props.data.contentfulBlogPost.publishedDate}</p> */}
-            {
-                documentToReactComponents(props.data.contentfulBlogPost.body.json)
-            }
+            <div dangerouslySetInnerHTML={{__html: props.data.contentfulBlogPost.blogPostsMarkdown.childMarkdownRemark.html}}></div>
         </Layout>
     )
 }
